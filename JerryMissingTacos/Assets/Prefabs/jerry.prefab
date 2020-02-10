@@ -81,6 +81,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -105,7 +106,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -351947840578279037, guid: 80e492836c53247448c5edc76a3a65d5,
+  m_Sprite: {fileID: 2879993453731009294, guid: 80e492836c53247448c5edc76a3a65d5,
     type: 3}
   m_Color: {r: 0.3, g: 0.84558827, b: 1, a: 1}
   m_FlipX: 0
@@ -154,11 +155,14 @@ MonoBehaviour:
   jumpHeight: 30
   groundCheck: {fileID: 7506451052325443793}
   groundCheckRadius: 0.2
+  groundCheckDist: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
+  grounded: 0
   oneJump: 0
-  canMove: 1
+  hasJumped: 0
+  jerryAnimator: {fileID: 0}
 --- !u!114 &7506451053226240654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +182,7 @@ MonoBehaviour:
   Button1: {fileID: 0}
   Button2: {fileID: 0}
   health: {fileID: 0}
+  isInvincible: 0
 --- !u!61 &5220953577621089389
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -195,7 +200,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.59, y: 0.85}
+    oldSize: {x: 1.97, y: 1.13}
     newSize: {x: 5.2, y: 5.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

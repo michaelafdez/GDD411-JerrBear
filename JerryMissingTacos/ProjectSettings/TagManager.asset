@@ -19,6 +19,7 @@ TagManager:
   - Lorica
   - Godel
   - Oak
+  - Limit
   layers:
   - Default
   - TransparentFX
